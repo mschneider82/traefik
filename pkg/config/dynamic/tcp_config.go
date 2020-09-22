@@ -103,6 +103,7 @@ func (l *TCPServersLoadBalancer) Mergeable(loadBalancer *TCPServersLoadBalancer)
 
 // TCPServer holds a TCP Server configuration.
 type TCPServer struct {
-	Address string `json:"address,omitempty" toml:"address,omitempty" yaml:"address,omitempty" label:"-"`
-	Port    string `toml:"-" json:"-" yaml:"-"`
+	Address              string `json:"address,omitempty" toml:"address,omitempty" yaml:"address,omitempty" label:"-"`
+	Port                 string `toml:"-" json:"-" yaml:"-"`
+	ProxyProtocolVersion int    `json:"proxyProtocolVersion,omitempty" toml:"proxyProtocolVersion,omitempty" yaml:"proxyProtocolVersion,omitempty" label:"-"`
 }
